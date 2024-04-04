@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
  
 export default function ListUser() {
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function ListUser() {
          
     }
     return (
-        <div className="row">
+        <div className="row ">
             <div className="col-2"></div>
             <div className="col-8">
             <h1>Create user</h1>
@@ -39,7 +39,14 @@ export default function ListUser() {
                   <label>Mobile</label>
                   <input type="text" className="form-control" name="mobile" onChange={handleChange} />
                 </div>    
+
+          <div className='d-flex justify-content-around ap-2'>
+            <Link to="/">
+                <button type="submit" name="add" className="btn btn-warning">Back</button>
+          </Link>
+
                 <button type="submit" name="add" className="btn btn-primary">Save</button>
+          </div>
             </form>
             </div>
  

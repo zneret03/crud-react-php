@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'; //npm i react-router-dom --save
+import {BrowserRouter, Routes, Route} from 'react-router-dom'; //npm i react-router-dom --save
 import './App.css';
 import CreateUser from './CreateUser';
 import EditUser from './EditUser';
@@ -9,8 +9,6 @@ function App() {
     <div className="container">
     <div className="App">
       <BrowserRouter>
-        <Link to="user/create" className="btn btn-success">Add New User</Link>
- 
         <Routes>
           <Route index element={<ListUser />} />
           <Route path="user/create" element={<CreateUser />} />

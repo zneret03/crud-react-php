@@ -21,10 +21,12 @@ export default function ListUser() {
             console.log(response.data);
             getUsers();
         });
-    }
+ 
+  }
     return (
         <div className="row">
             <div className="col-12">
+            <Link to="user/create" className="btn btn-success">Add New User</Link>
             <h1>List Users</h1>
             <table className="table table-bordered table-striped">
                 <thead>
